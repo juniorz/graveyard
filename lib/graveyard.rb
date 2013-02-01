@@ -1,0 +1,3 @@
+module Graveyard
+
+end
