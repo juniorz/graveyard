@@ -20,7 +20,11 @@ describe Graveyard::Stele do
     end
   end
 
-  describe :visit do
+  it 'is a requestable' do
+    stele.should be_requestable
+  end
 
+  describe :visit do
+    # it should use the Domain Application Protocol to determine the method
   end
 end

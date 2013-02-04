@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Reinaldo Junior"]
-  s.date = "2013-02-01"
+  s.date = "2013-02-04"
   s.description = "TODO: longer description of your gem"
   s.email = "rjunior@thoughtworks.com"
   s.extra_rdoc_files = [
@@ -20,12 +20,16 @@ Gem::Specification.new do |s|
     ".document",
     ".rspec",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "graveyard.gemspec",
     "lib/graveyard.rb",
+    "lib/graveyard/stele.rb",
     "spec/graveyard_spec.rb",
+    "spec/lib/stele_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/juniorz/graveyard"
@@ -39,6 +43,7 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<activesupport>, ["~> 3.2"])
+      s.add_runtime_dependency(%q<faraday>, [">= 0.8.0"])
       s.add_development_dependency(%q<pry>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
@@ -46,6 +51,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
     else
       s.add_dependency(%q<activesupport>, ["~> 3.2"])
+      s.add_dependency(%q<faraday>, [">= 0.8.0"])
       s.add_dependency(%q<pry>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
@@ -54,6 +60,7 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<activesupport>, ["~> 3.2"])
+    s.add_dependency(%q<faraday>, [">= 0.8.0"])
     s.add_dependency(%q<pry>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])

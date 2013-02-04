@@ -1,7 +1,10 @@
 require 'active_support/basic_object'
+require 'graveyard/requestable'
 
 module Graveyard
   class Stele < ActiveSupport::BasicObject
+    include Requestable
+
     def initialize(value)
       # NOTE: Do I need to String(value)?
       @value = value
